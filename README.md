@@ -8,6 +8,7 @@ index.html             the page
 leaflet.pdf            the printed leaflet, offered as a download
 logo-st-barnabas.png   parish logo, lifted from the leaflet
 logo-st-thomas.png     parish logo, lifted from the leaflet
+photo-nave.jpg         the photograph, lifted from the leaflet
 GOOGLE-FORM.md         what to put in the Google Form
 README.md              this file
 ```
@@ -107,6 +108,30 @@ and they stack one above the other on a narrow phone. Each links to the church's
 If you have the original vector artwork (`.svg`, `.ai` or `.eps`), an SVG version would be
 sharper still and a fraction of the file size — drop it in and change the `src` and the file
 extension.
+
+## The photograph
+
+`photo-nave.jpg` is the picture of the nave at Mass from page 1 of your leaflet, saved at full
+resolution for the web.
+
+**To use a different picture:** put your own `.jpg` in this folder, then change one word in
+`index.html` — find `photo-nave.jpg` and replace it with your filename. Change the `alt="..."`
+wording too, which is what a blind visitor's screen reader reads aloud.
+
+Two things that catch people out when a picture does not appear:
+
+- **Capital letters matter.** `Photo.JPG` and `photo.jpg` are different files as far as the web
+  server is concerned, even though your Mac treats them as the same. Whatever you type in
+  `index.html` must match the filename exactly, including the extension.
+- **The file has to be in the repository.** Dragging it into the GitHub upload box is not
+  enough on its own — you must then scroll down and click **Commit changes**.
+
+The picture is cropped to a 4:3 letterbox on a computer and a taller shape on a phone, so it
+works either way round. Two numbers in `index.html` control that, both commented:
+
+- `padding-top:75%` — the shape of the frame. Larger means taller.
+- `object-position:center 72%` — which part of the picture shows through. Larger means lower
+  down the image.
 
 ## Notes on what is in the page
 
