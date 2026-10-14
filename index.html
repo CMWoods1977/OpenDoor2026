@@ -44,12 +44,22 @@
   a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
 
   /* ---------- masthead ---------- */
-  header.top{border-bottom:1px solid var(--faint);background:#fff;}
+  header.top{background:#fff;}
   header.top .wrap{padding-top:20px;padding-bottom:20px;}
   .logos{display:flex;align-items:center;justify-content:center;gap:26px;flex-wrap:wrap;}
   .logos a{display:block;line-height:0;}
   .logos img{height:36px;width:auto;display:block;}
   .logos .divider{width:1px;align-self:stretch;min-height:34px;background:var(--faint);}
+
+
+  /* ---------- tabs ---------- */
+  nav.tabs{background:#fff;border-bottom:1px solid var(--faint);}
+  nav.tabs .wrap{display:flex;justify-content:center;flex-wrap:wrap;padding-left:10px;padding-right:10px;}
+  nav.tabs a, nav.tabs span.here{display:block;padding:15px 18px 12px;font-size:.78rem;
+        letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--grey);
+        border-bottom:3px solid transparent;white-space:nowrap;}
+  nav.tabs a:hover{color:var(--ox);border-bottom-color:var(--faint);}
+  nav.tabs span.here{color:var(--ox);border-bottom-color:var(--gold);}
 
   /* ---------- hero ---------- */
   .hero{padding:52px 0 40px;text-align:center;border-bottom:1px solid var(--faint);}
@@ -145,6 +155,7 @@
     section{padding:34px 0;}
     .costrow{grid-template-columns:1fr;gap:10px;margin-bottom:10px;}
     figure.photo .frame{padding-top:118%;}
+    nav.tabs a, nav.tabs span.here{padding:12px 11px 9px;font-size:.69rem;letter-spacing:.07em;}
     .logos{gap:16px;}
     .logos img{height:30px;}
     .logos .divider{display:none;}
@@ -172,6 +183,15 @@
     </div>
   </div>
 </header>
+
+<nav class="tabs">
+  <div class="wrap">
+      <span class="here">An Open Door</span>
+      <a href="testimonies.html">What it means to me</a>
+      <a href="#respond">Respond</a>
+  </div>
+</nav>
+
 
 <div class="hero">
   <div class="wrap">
