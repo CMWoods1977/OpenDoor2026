@@ -41,12 +41,22 @@
 
   /* ---------- tabs ---------- */
   nav.tabs{background:#fff;border-bottom:1px solid var(--faint);}
-  nav.tabs .wrap{display:flex;justify-content:center;flex-wrap:wrap;padding-left:10px;padding-right:10px;}
-  nav.tabs a, nav.tabs span.here{display:block;padding:15px 18px 12px;font-size:.78rem;
-        letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--grey);
-        border-bottom:3px solid transparent;white-space:nowrap;}
-  nav.tabs a:hover{color:var(--ox);border-bottom-color:var(--faint);}
-  nav.tabs span.here{color:var(--ox);border-bottom-color:var(--gold);}
+  nav.tabs .wrap{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;
+        padding:15px 14px;}
+  nav.tabs a, nav.tabs span.here{display:block;padding:12px 24px;border-radius:3px;
+        font-size:.88rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+        text-decoration:none;color:#fff;border:2px solid transparent;white-space:nowrap;
+        transition:opacity .15s;}
+  /* each item takes one of the campaign's three colours */
+  nav.tabs .wrap > *:nth-child(1){background:var(--slate);border-color:var(--slate);}
+  nav.tabs .wrap > *:nth-child(2){background:var(--ox);border-color:var(--ox);}
+  nav.tabs .wrap > *:nth-child(3){background:var(--gold);border-color:var(--gold);color:#1c1c1c;}
+  nav.tabs a:hover{opacity:.84;}
+  /* the page you are on is hollow, so it reads as "you are here" */
+  nav.tabs .wrap > span.here{background:#fff;}
+  nav.tabs .wrap > span.here:nth-child(1){color:var(--slate);}
+  nav.tabs .wrap > span.here:nth-child(2){color:var(--ox);}
+  nav.tabs .wrap > span.here:nth-child(3){color:#8a7444;}
 
   .hero{padding:48px 0 38px;text-align:center;border-bottom:1px solid var(--faint);}
   .rule{height:2px;width:70px;background:var(--gold);margin:0 auto 24px;}
@@ -93,7 +103,8 @@
     body{font-size:17px;}
     .hero{padding:34px 0 28px;}
     section{padding:32px 0;}
-    nav.tabs a, nav.tabs span.here{padding:12px 11px 9px;font-size:.69rem;letter-spacing:.07em;}
+    nav.tabs .wrap{gap:7px;padding:12px 10px;}
+    nav.tabs a, nav.tabs span.here{padding:10px 14px;font-size:.76rem;letter-spacing:.04em;}
     .logos{gap:16px;}
     .logos img{height:30px;}
     .logos .divider{display:none;}
@@ -119,7 +130,7 @@
 <nav class="tabs">
   <div class="wrap">
       <a href="index.html">An Open Door</a>
-      <span class="here">What it means to me</span>
+      <span class="here">Testimonials</span>
       <a href="index.html#respond">Respond</a>
   </div>
 </nav>
@@ -170,7 +181,7 @@
       <p>Through the beauty and reverence of the Mass, the richness of the Anglo-Catholic tradition, and the warmth of its congregation, my faith flourished. It was here that I was baptised and confirmed, two of the most meaningful moments of my life. With Father Christopher&rsquo;s guidance, faith became a source of strength, comfort and purpose extending far beyond Sunday worship.</p>
       <p>There is something extraordinarily special about St Barnabas. The incense, music, liturgy and beauty of the building draw us towards God. Yet what makes the church truly remarkable is the devotion of those who sustain it, ensuring its doors remain open and its traditions flourish.</p>
       <p>Since moving to Jersey, I have come to appreciate St Barnabas even more. Distance has only deepened my gratitude for the church and those who nurtured my faith. Whenever I return to Oxford, attending Mass at St Barnabas remains something I cherish.</p>
-      <p class="by">Aysha <span>Recently baptised and confirmed at St Barnabas, now living away from Oxford</span></p>
+      <p class="by">Aysha <span>Recent graduate, now living away from Oxford</span></p>
     </div>
 
     <div class="voice">

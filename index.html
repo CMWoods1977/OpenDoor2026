@@ -54,12 +54,22 @@
 
   /* ---------- tabs ---------- */
   nav.tabs{background:#fff;border-bottom:1px solid var(--faint);}
-  nav.tabs .wrap{display:flex;justify-content:center;flex-wrap:wrap;padding-left:10px;padding-right:10px;}
-  nav.tabs a, nav.tabs span.here{display:block;padding:15px 18px 12px;font-size:.78rem;
-        letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--grey);
-        border-bottom:3px solid transparent;white-space:nowrap;}
-  nav.tabs a:hover{color:var(--ox);border-bottom-color:var(--faint);}
-  nav.tabs span.here{color:var(--ox);border-bottom-color:var(--gold);}
+  nav.tabs .wrap{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;
+        padding:15px 14px;}
+  nav.tabs a, nav.tabs span.here{display:block;padding:12px 24px;border-radius:3px;
+        font-size:.88rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+        text-decoration:none;color:#fff;border:2px solid transparent;white-space:nowrap;
+        transition:opacity .15s;}
+  /* each item takes one of the campaign's three colours */
+  nav.tabs .wrap > *:nth-child(1){background:var(--slate);border-color:var(--slate);}
+  nav.tabs .wrap > *:nth-child(2){background:var(--ox);border-color:var(--ox);}
+  nav.tabs .wrap > *:nth-child(3){background:var(--gold);border-color:var(--gold);color:#1c1c1c;}
+  nav.tabs a:hover{opacity:.84;}
+  /* the page you are on is hollow, so it reads as "you are here" */
+  nav.tabs .wrap > span.here{background:#fff;}
+  nav.tabs .wrap > span.here:nth-child(1){color:var(--slate);}
+  nav.tabs .wrap > span.here:nth-child(2){color:var(--ox);}
+  nav.tabs .wrap > span.here:nth-child(3){color:#8a7444;}
 
   /* ---------- hero ---------- */
   .hero{padding:52px 0 40px;text-align:center;border-bottom:1px solid var(--faint);}
@@ -140,7 +150,11 @@
   /* ---------- voices teaser ---------- */
   .voices{background:var(--card);border:1px solid var(--faint);border-radius:3px;padding:26px 26px 22px;margin-top:20px;}
   .voices p{font-size:1.02rem;}
-  .voices .more{margin-bottom:0;}
+  .voices .more{margin-bottom:0;margin-top:20px;}
+  .readbtn{display:inline-block;background:var(--ox);color:#fff;text-decoration:none;
+           padding:13px 28px;border-radius:3px;font-size:1rem;letter-spacing:.02em;
+           border:2px solid var(--ox);transition:background .15s,color .15s;}
+  .readbtn:hover{background:transparent;color:var(--ox);}
 
   .download{display:inline-block;text-decoration:none;border:1px solid var(--slate);color:var(--slate);
             padding:12px 24px;border-radius:3px;font-size:.98rem;}
@@ -155,7 +169,8 @@
     section{padding:34px 0;}
     .costrow{grid-template-columns:1fr;gap:10px;margin-bottom:10px;}
     figure.photo .frame{padding-top:118%;}
-    nav.tabs a, nav.tabs span.here{padding:12px 11px 9px;font-size:.69rem;letter-spacing:.07em;}
+    nav.tabs .wrap{gap:7px;padding:12px 10px;}
+    nav.tabs a, nav.tabs span.here{padding:10px 14px;font-size:.76rem;letter-spacing:.04em;}
     .logos{gap:16px;}
     .logos img{height:30px;}
     .logos .divider{display:none;}
@@ -187,7 +202,7 @@
 <nav class="tabs">
   <div class="wrap">
       <span class="here">An Open Door</span>
-      <a href="testimonies.html">What it means to me</a>
+      <a href="testimonies.html">Testimonials</a>
       <a href="#respond">Respond</a>
   </div>
 </nav>
@@ -254,7 +269,7 @@
     <p>Figures only go so far. Eight people have written about what this church means to them &mdash; students, academics, former parishioners, someone who only ever makes Tuesdays and Thursdays.</p>
     <div class="voices">
       <p>They write about the first time they came in, about being baptised and confirmed here, about great-grandparents in the choir, about finding a glorious basilica at the end of an ordinary street. If you would like to add yours, we would be glad to have it, and it need only be a few sentences.</p>
-      <p class="more"><a href="testimonies.html">Read them, and add your own &rarr;</a></p>
+      <p class="more"><a class="readbtn" href="testimonies.html">Read the testimonials &rarr;</a></p>
     </div>
   </div>
 </section>
